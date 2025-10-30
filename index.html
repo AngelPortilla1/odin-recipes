@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Proyecto Odin Recipes — colección de recetas." />
+    <meta name="author" content="Tu Nombre" />
+    <title>Odin Recipes</title>
+</head>
+<body>
+    <h1>Odin Recipes</h1>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+    :root{
+        --accent:#ffcc33;
+        --muted:#e7e7e7;
+    }
+
+    body{
+        background:
+            radial-gradient(circle at 10% 10%, rgba(255,204,51,0.06), transparent 8%),
+            linear-gradient(180deg,#070814 0%, #151028 60%);
+        color:var(--muted);
+        font-family:'Press Start 2P', ui-monospace, Menlo, Monaco, monospace;
+        padding:2.5rem;
+    }
+
+    h1{
+        color:var(--accent);
+        font-size:1.6rem;
+        margin:0 0 1.25rem 0;
+        text-shadow:0 2px 0 rgba(0,0,0,0.6), 0 0 10px rgba(255,204,51,0.08);
+        letter-spacing:1px;
+    }
+
+    /* Retro card list */
+    ul.recipe-list{
+        list-style:none;
+        padding:0;
+        margin:0;
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+        gap:1rem;
+    }
+
+    ul.recipe-list li{
+        background:
+            linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.14));
+        border:2px solid rgba(255,204,51,0.12);
+        padding:1rem;
+        border-radius:10px;
+        box-shadow: 0 8px 18px rgba(0,0,0,0.65), inset 0 1px 0 rgba(255,255,255,0.02);
+        transition: transform .18s ease, box-shadow .18s ease;
+    }
+
+    ul.recipe-list a{
+        color:var(--accent);
+        text-decoration:none;
+        display:block;
+        font-size:0.85rem;
+    }
+
+    ul.recipe-list li:hover{
+        transform:translateY(-6px);
+        box-shadow: 0 18px 36px rgba(0,0,0,0.75), 0 0 18px rgba(255,204,51,0.06);
+    }
+
+    /* Accent ribbon */
+    ul.recipe-list li::before{
+        content:'';
+        display:block;
+        width:100%;
+        height:6px;
+        margin:-1rem 0 0 -1px;
+        border-top-left-radius:8px;
+        border-top-right-radius:8px;
+        background: linear-gradient(90deg, rgba(255,204,51,0.9), rgba(255,102,102,0.6));
+        opacity:0.12;
+    }
+    </style>
+
+    <ul class="recipe-list">
+            <li><a href="recipes/Arroz_con_pollo.html">Arroz con pollo</a></li>
+            <li><a href="recipes/sopade_arroz.html">Sopa de arroz</a></li>
+            <li><a href="recipes/bandejapaisa.html">Bandeja Paisa</a></li>
+    </ul>
+
+</body>
+</html>
